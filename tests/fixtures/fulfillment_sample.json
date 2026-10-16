@@ -1,0 +1,34 @@
+{
+  "head": {"status": "200", "data": {}},
+  "body": {
+    "content": {
+      "pickupMessage": {
+        "stores": [
+          {
+            "storeName": "Woodfield",
+            "storeNumber": "R100",
+            "city": "Schaumburg",
+            "partsAvailability": {
+              "MTEST1LL/A": {
+                "pickupDisplay": "unavailable",
+                "pickupSearchQuote": "<span>Currently unavailable</span>",
+                "storePickupQuote": "Currently unavailable at Woodfield"
+              }
+            }
+          },
+          {
+            "storeName": "Old Orchard",
+            "storeNumber": "R200",
+            "city": "Skokie",
+            "partsAvailability": {
+              "MTEST1LL/A": {
+                "pickupDisplay": "available",
+                "pickupSearchQuote": "Available<br/>Today"
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}

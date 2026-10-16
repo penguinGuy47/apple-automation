@@ -1,0 +1,18 @@
+# Rehearsal config for tests/mock_apple.py. Run with: APPLE_CVV=123
+product_url = "http://127.0.0.1:8765/product"
+apple_base = "http://127.0.0.1:8765"
+part_number = "MTEST1LL/A"
+stores = ["Woodfield"]
+interval_seconds = 5
+jitter = 0
+engine = "browser"
+
+[notify]
+open_browser = false
+
+[checkout]
+enabled = true
+place_order = true
+browser_channel = ""
+profile_dir = ".browser-profile-mock"
+step_timeout_seconds = 8

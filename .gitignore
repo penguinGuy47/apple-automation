@@ -1,0 +1,8 @@
+config.toml
+.browser-profile/
+bot.log
+__pycache__/
+.pytest_cache/
+*.pyc
+.venv/
+.browser-profile-mock/

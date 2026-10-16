@@ -1,0 +1,51 @@
+# Copy to config.toml and edit.  `python bot.py --help` for commands.
+
+product_url = "https://www.apple.com/shop/buy-iphone/iphone-duo/7.6-inch-display-256gb-star-white-unlocked"
+
+# Apple part number for that exact configuration, e.g. "MABC4LL/A".
+# Fill it in with:  python bot.py discover
+part_number = ""
+
+# ZIP used for the store search. 60173 = Schaumburg (Woodfield is in range).
+zip_code = "60173"
+
+# Stores to accept, in priority order. Store name fragment or number ("R123").
+# `python bot.py stores` lists what's near your ZIP. Add backups if you'd
+# take one, e.g. ["Woodfield", "Old Orchard", "Oakbrook"].
+stores = ["Woodfield"]
+
+# Seconds between checks (randomized by +/- jitter). 10-15s is fast enough to
+# catch a drop and slow enough to look like one person refreshing a page.
+interval_seconds = 12
+jitter = 0.3
+max_backoff_seconds = 900
+
+# "browser" (recommended): a real Chrome window does the checks and is ready
+# to check out instantly.  "http": lightweight, alert-only setups.
+engine = "browser"
+
+# Optional local start time, e.g. "2026-10-23T00:00". Empty = start now.
+start_at = "2026-10-23T00:00"
+
+[notify]
+# Free phone push: install the "ntfy" app, subscribe to a hard-to-guess topic
+# name, and put the same name here. Anyone who knows the name can read it.
+ntfy_topic = ""
+discord_webhook = ""
+desktop = true
+sound = true
+open_browser = true
+
+[checkout]
+# false = alert only. true = add to bag and walk checkout for pickup.
+enabled = true
+# false = stop on the "Place Your Order" page and alert you (one click left).
+# true  = actually place the order. Test with false first!
+place_order = false
+guest = false
+headless = false
+browser_channel = "chrome"   # "" to use Playwright's bundled Chromium
+profile_dir = ".browser-profile"
+# If Apple asks for your card's security code, it's read from this env var.
+cvv_env = "APPLE_CVV"
+step_timeout_seconds = 20
